@@ -1,0 +1,293 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: May 13, 2022 at 07:17 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.27
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `train`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `AdminId` int(11) NOT NULL,
+  `AminPassword` int(11) NOT NULL,
+  `AdminName` varchar(50) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`AdminId`, `AminPassword`, `AdminName`) VALUES
+(1, 123, 'mahmoud');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `booking`
+--
+
+CREATE TABLE `booking` (
+  `BookingId` int(11) NOT NULL,
+  `DayOFJourney` date NOT NULL,
+  `AdminId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `booking`
+--
+
+INSERT INTO `booking` (`BookingId`, `DayOFJourney`, `AdminId`) VALUES
+(1, '0000-00-00', 1),
+(2, '2022-05-06', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `booking(fk)`
+--
+
+CREATE TABLE `booking(fk)` (
+  `BookingId` int(11) NOT NULL,
+  `TicketId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `booking(fk)`
+--
+
+INSERT INTO `booking(fk)` (`BookingId`, `TicketId`) VALUES
+(1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `stations`
+--
+
+CREATE TABLE `stations` (
+  `StationId` int(11) NOT NULL,
+  `StationName` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `TrainId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `stations`
+--
+
+INSERT INTO `stations` (`StationId`, `StationName`, `TrainId`) VALUES
+(1, 'Alexandria', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ticket`
+--
+
+CREATE TABLE `ticket` (
+  `TicketId` int(11) NOT NULL,
+  `TicketClass` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `TicketPrice` int(11) NOT NULL,
+  `UserId` int(11) NOT NULL,
+  `TrainId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `ticket`
+--
+
+INSERT INTO `ticket` (`TicketId`, `TicketClass`, `TicketPrice`, `UserId`, `TrainId`) VALUES
+(1, 'first class', 50, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `train`
+--
+
+CREATE TABLE `train` (
+  `TrainId` int(11) NOT NULL,
+  `TimeArrival` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `train`
+--
+
+INSERT INTO `train` (`TrainId`, `TimeArrival`) VALUES
+(1, 10);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `UserId` int(11) NOT NULL,
+  `UserName` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `UserPassword` int(11) NOT NULL,
+  `balance` int(11) NOT NULL,
+  `gender` tinyint(1) NOT NULL,
+  `DOB` date NOT NULL,
+  `AdminId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`UserId`, `UserName`, `UserPassword`, `balance`, `gender`, `DOB`, `AdminId`) VALUES
+(1, 'monty', 101, 100000, 1, '2022-05-10', 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`AdminId`);
+
+--
+-- Indexes for table `booking`
+--
+ALTER TABLE `booking`
+  ADD PRIMARY KEY (`BookingId`),
+  ADD KEY `AdminId` (`AdminId`);
+
+--
+-- Indexes for table `booking(fk)`
+--
+ALTER TABLE `booking(fk)`
+  ADD PRIMARY KEY (`BookingId`,`TicketId`),
+  ADD KEY `TicketId` (`TicketId`);
+
+--
+-- Indexes for table `stations`
+--
+ALTER TABLE `stations`
+  ADD PRIMARY KEY (`StationId`),
+  ADD KEY `TrainId` (`TrainId`);
+
+--
+-- Indexes for table `ticket`
+--
+ALTER TABLE `ticket`
+  ADD PRIMARY KEY (`TicketId`),
+  ADD KEY `TrainId` (`TrainId`),
+  ADD KEY `UserId` (`UserId`);
+
+--
+-- Indexes for table `train`
+--
+ALTER TABLE `train`
+  ADD PRIMARY KEY (`TrainId`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`UserId`),
+  ADD KEY `AdminId` (`AdminId`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `AdminId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `booking`
+--
+ALTER TABLE `booking`
+  MODIFY `BookingId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `stations`
+--
+ALTER TABLE `stations`
+  MODIFY `StationId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `ticket`
+--
+ALTER TABLE `ticket`
+  MODIFY `TicketId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `train`
+--
+ALTER TABLE `train`
+  MODIFY `TrainId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `UserId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `booking`
+--
+ALTER TABLE `booking`
+  ADD CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`AdminId`) REFERENCES `admin` (`AdminId`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `booking(fk)`
+--
+ALTER TABLE `booking(fk)`
+  ADD CONSTRAINT `booking(fk)_ibfk_1` FOREIGN KEY (`BookingId`) REFERENCES `booking` (`BookingId`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `booking(fk)_ibfk_2` FOREIGN KEY (`TicketId`) REFERENCES `ticket` (`TicketId`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `stations`
+--
+ALTER TABLE `stations`
+  ADD CONSTRAINT `stations_ibfk_1` FOREIGN KEY (`TrainId`) REFERENCES `train` (`TrainId`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `ticket`
+--
+ALTER TABLE `ticket`
+  ADD CONSTRAINT `ticket_ibfk_1` FOREIGN KEY (`TrainId`) REFERENCES `train` (`TrainId`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `ticket_ibfk_2` FOREIGN KEY (`UserId`) REFERENCES `user` (`UserId`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`AdminId`) REFERENCES `admin` (`AdminId`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

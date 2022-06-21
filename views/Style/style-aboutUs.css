@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+/* aboutUs by gayan */
+
+
+body {
+  font-family: sans-serif;
+  margin-left: 2%;
+}
+
+.responsive-T {
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+  }
+
+#div-last {
+    background-color:rgb(41, 39, 39);
+  }
+
+#h1-align{
+    text-align: center;
+}
+
+#h4-align{
+  text-align: center;
+}
+
+#div-align{
+  text-align: left;
+  font-size: 20px;
+}
+
+.div-text{
+  color: white;
+}
+
+.column-last {
+  float: left;
+  width: 40%;
+  height: 82px;
+}

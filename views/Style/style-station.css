@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+/* by Gayan*/
+
+/* font family for whole body texts*/
+body {
+    font-family: sans-serif;
+}
+
+#h1-cus{
+    text-align: center;
+}
+
+/* common css for all text tyoe inputs in html */
+input[type=text] {
+    width: 71%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 11px;
+    margin-left: 18%;
+    margin-top: 20px;
+    font-size: 22px;
+    text-align: center;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 50px 36px 50px 33px
+}
+
+.tb-margin{
+    margin-left:1%;
+}
+
+/*  display only vertical lines of table 
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 200%;
+    text-align: center;
+    
+}
+
+#header-color {
+    font-size: 300%;
+    color: blue;
+
+}
+
+
+
+
+/* for all <tr> in page 
+tr { 
+    border: none; 
+    font-size: 3em;
+    font-weight: 400;
+}
+
+th{
+    text-align: center;
+    font-size: 5%;
+}
+
+.tr0 {
+  border-right: solid 1px black; 
+  border-left: solid 1px black;
+  padding: 3%;
+  margin-right: 10%;
+  font-size: 60%;
+}
+*/

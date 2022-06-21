@@ -1,0 +1,59 @@
+
+  .column-T {
+	  
+	float: left;
+	padding: 10px;
+	height: 300px; 
+  }
+  
+  .left-T{
+	  font-family:calibri;
+	  color: gray;
+	  padding-left: 60px;
+	  padding-right: 10px;
+	  padding-bottom:100px;
+	  width: 40%;
+  }
+  
+  
+  .right-T {
+	  font-family:calibri;
+	  color:  grey;
+	  width: 40%;
+	  padding-left:60px;
+	  padding-right:70px;
+	  padding-bottom:100px;
+	  
+  }
+  
+  
+  
+  
+  .but{
+	  
+   
+	color: black;
+	padding: 20px 30px;
+	background-color:#99ccff;
+	font-size: 20px;
+	border: none;
+	height:75px;
+	width: 200px;
+	
+  }
+  
+  
+  
+  
+  .but:hover{
+	  
+	  background-color: blue;
+  }
+  
+  input [type = submit]
+  {
+	  background-color:blue;
+	  padding :20px 30px;
+	  cursor: pointer;
+  }
+  

@@ -1,0 +1,303 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    box-sizing: border-box;
+  }
+
+  .column-general {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 100%; 
+    margin-top: 1%;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .column-first {
+    float: left;
+    width: 29%;
+    margin-right: 1%;
+    padding: 10px;
+    height: 100%; 
+    margin-top: 1%;
+  }
+
+  .column-two {
+    float: left;
+    width: 70%;
+    padding: 10px;
+    height: 100%; 
+    margin-top: 1%;
+  }
+  
+  /* Clear floats after the columns */
+  .row-T:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .round-coner{
+    border-radius: 15px;
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 9px 20px;
+    margin: 0px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: #3F51D4;
+    color: white;
+  }
+
+  .color-white{
+      color: white;
+  }
+
+  .div-custom{
+    width: 20%;
+  }
+
+  .row-T{
+    padding-bottom: 1%;
+  }
+
+  #btnExchange {
+    background-color: #3F51D4;
+    color: white;
+    padding: 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    margin-left: 15px;
+    border: none
+  }
+
+  .button-search {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+  }
+
+  #txtNoOfPassengers{
+    background-color: white !important;
+    border-bottom: 2px solid gray !important;
+    font-size: 1em !important;
+  }
+
+  .ful-width{
+    width: 100%;
+  }
+
+  .half-width{
+    width: 100%;
+  }
+  .custom-style-list{
+    border-style: solid;
+    background-color: white;
+  }
+
+  .column-A {
+    float: left;
+    width: 20%;
+    margin-right: 1%;
+    padding: 10px;
+    height: 100%; 
+  }
+
+  .column-B {
+    float: left;
+    width: 20%;
+    margin-right: 1%;
+    padding: 10px;
+    height: 100%; 
+  }
+
+  .column-C {
+    float: left;
+    width: 20%;
+    margin-right: 1%;
+    padding: 10px;
+    height: 100%; 
+  }
+
+  .column-D {
+    float: left;
+    width: 20%;
+    margin-right: 1%;
+    padding: 10px;
+    height: 100%; 
+  }
+  .column-train-detail-general {
+    float: left;
+    width: 20%;
+    margin-right: 1%;
+    padding: 10px;
+    height: 100%; 
+  }
+
+  .column-train-detail-large {
+    float: left;
+    width: 35%;
+    margin-right: 1%;
+    padding: 10px;
+    height: 100%; 
+  }
+
+  .lable-train-type{
+    text-transform: uppercase;
+    color: #00C409;
+  }
+
+  .lable-cus{
+    font-weight: bold;
+    font-size: 1em;
+  }
+
+  .lable-cus-time{
+    font-weight: bold;
+    font-size: 0.8em;
+    
+  }
+
+  .legend-custom{
+    background-color: #4C4C4C;
+    font-size: 1em;
+    color: white;
+    padding: 2%;
+    font-weight: bold;
+  }
+
+  .style-price{
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .div-details{
+    background-color: #CAFFC7;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 1%;
+  }
+
+  .div-status-available{
+    color: #09A400;
+  }
+
+  .div-status-remains{
+    color: #005EA4;
+    margin-left: 15%;
+  }
+
+  .button-sm{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 7px 2px;
+    cursor: pointer;
+    width: 66%;
+    font-weight: bold;
+  }
+
+  .reviews{
+    font-weight: bold;
+    color: gray;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .review-parent{
+    border-style: groove;
+  }
+
+  .column-Review-left {
+    float: left;
+    width: 30%;
+    margin-right: 1%;
+    padding: 10px;
+    height: 100%; 
+    text-align: center;
+  }
+
+  .column-Review-right {
+    float: left;
+    width: 68%;
+    margin-right: 1%;
+    padding: 10px;
+    height: 100%; 
+  }
+
+  textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 1%;
+  }
+
+  .button-addReview {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 7px 2px;
+    cursor: pointer;
+    width: 30%;
+    font-weight: bold;
+}
+
+  .btn-left{
+    text-align: right;
+    padding-right: 1%;
+  }
+
+  .review-add{
+    border: 2px solid #2a2525;
+    border-radius: 8px;
+    margin-top: 1%;
+  }
+
+  .jconfirm{
+    width: 50%;
+    margin-left: 25%;
+    perspective: 400px;
+    -webkit-perspective: 400px;
+  }
+
+  .jconfirm.jconfirm-white .jconfirm-bg, .jconfirm.jconfirm-light .jconfirm-bg {
+    background-color: transparent !important;
+    opacity: .2;
+}
+
+.checked {
+  color: orange;
+}
+

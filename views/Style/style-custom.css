@@ -1,0 +1,219 @@
+@charset "utf-8";
+/* CSS Document */
+
+.div-parent-lg{
+    height: 250px;
+    background-color: #3F51D4;
+}
+
+.responsive-custom {
+    width: 67%;
+    height: auto;
+  }
+
+.font-Sego{
+    font-family: "Segoe UI",Arial,sans-serif;
+  }
+
+.div-parent-md{
+    height: 200px;
+    background-color: #3F51D4;
+}
+.pull-right-T{
+    float: right !important;
+}
+.pull-left-T{
+    float: left !important;
+}
+.container-custom {
+    width: 960px;
+    position: relative;
+    margin:0 auto;
+    line-height: 1.4em;
+    background-color: #3F51D4;
+}
+
+.font-md-T{
+    font-size: 2vw;
+}
+
+.font-xs-5T{
+    font-size: .5vw;
+}
+
+.color-black-T-blue{
+    color: black !important;
+}
+
+.display-hide-T{
+    display: none !important;
+}
+
+.display-show-T{
+    display: block !important;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column-T {
+    float: left;
+    width: 32%;
+    height: 150px;
+   /* Should be removed. Only for demonstration */
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.border-color-error{
+    border: 1px solid red !important;
+}
+
+.bg-color-white-t{
+    background-color: white !important;
+}
+
+.border-line-T{
+    border: solid;
+}
+
+
+.remove-underline{
+    text-decoration: none;
+    color: white;
+}
+
+.copyright-align{
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+.master-blue-color{
+    color: #3F51D4
+}
+
+
+/* The container */
+.container-T {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container-T input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container-T:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container-T input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container-T input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container-T .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+  .form-inline-T {  
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  .margin-left-custom{
+    margin-left: 5%;
+  }
+
+  .medium-font-size-icon{
+    font-size: 1.5em;
+  }
+
+  .center-T{
+    text-align: center;
+  }
+
+  .margin-top-sm{
+    margin-top: 1%;
+  }
+
+
+
+@media only screen and (max-width: 479px){
+    .container-custom {
+        width: 90%;
+   }
+
+   .column-T {
+    float: left;
+    width: 32%;
+    height: 150px;
+    font-size: 9px;
+   }
+
+   
+}
+
+@media only screen and (max-width: 1440px) {
+    .div-parent-lg{
+        height: 190px;
+        background-color: #3F51D4;
+   }
+}
+
+@media (max-width: 800px) {
+    
+    .form-inline-T {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+
